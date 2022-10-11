@@ -2,11 +2,12 @@ const squares = document.querySelectorAll('.square')
 const mole= document.querySelector('.mole')
 const timeLeft= document.querySelector('#time-left')
 const score=document.querySelector('#score')
+const playAgain=document.querySelector('.play-again')
 
 
 let result= 0
 let hitPosition
-let currentTime = 60
+let currentTime = 2
 let timerId = null
 
 
@@ -43,6 +44,8 @@ function moveMole(){
 // randomSquare()
 moveMole()
 
+
+
 function countDown(){
 currentTime--
 timeLeft.textContent = currentTime
@@ -51,6 +54,7 @@ if(currentTime == 0){
     clearInterval(countdownTimerId)
     clearInterval(timerId)
     alert('GAME OVER! Your final score is: ' + result)
+    playAgain.style.display= 'flex'
 }
 }
 

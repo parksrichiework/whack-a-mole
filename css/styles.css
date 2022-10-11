@@ -41,6 +41,30 @@
     
 }
 
+.play-again{
+    display: none;
+    z-index: 5;
+    position: absolute;
+    /* display:flex; */
+    align-items: center;
+    justify-content: center;
+    width: 606px;
+    height: 606px;
+}
+
+button{
+    background-color: var(--celadon-blue);
+    border: solid 2px var(--celadon-blue);
+    padding: 0px 100px;
+    border-radius: 50px;
+    
+}
+
+button h1{
+    color: white;
+    
+}
+
 .mole:hover{
     opacity: 0.6;
     transition: 0.1s ease-in-out;
