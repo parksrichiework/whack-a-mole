@@ -7,7 +7,7 @@ const playAgain=document.querySelector('.play-again')
 
 let result= 0
 let hitPosition
-let currentTime = 2
+let currentTime = 30
 let timerId = null
 
 
@@ -55,7 +55,10 @@ if(currentTime == 0){
     clearInterval(timerId)
     alert('GAME OVER! Your final score is: ' + result)
     playAgain.style.display= 'flex'
+} else{
+    playAgain.style.display= 'none'
 }
 }
 
+// playAgain.style.display= "none"
 let countdownTimerId = setInterval(countDown, 1000)

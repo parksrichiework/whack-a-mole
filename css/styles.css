@@ -74,6 +74,10 @@ a h1{
     transition: 0.1s ease-in-out;
 }
 
+#time-left{
+    font-size: 20px;
+}
+
 body{
     width: 100%;
     display: flex;
