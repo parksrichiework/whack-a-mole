@@ -56,8 +56,7 @@ function closeBox(){
          console.log('closed the directions');
          moveMole()
          countDown()
-         startTimer()
-         
+         startTimer()      
                
          
   

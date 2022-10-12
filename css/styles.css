@@ -108,7 +108,9 @@ main{
     /* background-color: var(--celadon-blue); */
     background-image: url('logo-2021.png');
     background-size: cover;
-    
+    transition: 0.3s ease-in-out;
+    transform: scale(0.8);
+    border: none;
 }
 
 .play-again{
