@@ -7,7 +7,7 @@ const playAgain=document.querySelector('.play-again')
 
 let result= 0
 let hitPosition
-let currentTime = 30
+let currentTime = 32
 let timerId = null
 let countdownTimerId
 
