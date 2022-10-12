@@ -203,12 +203,7 @@ footer{
     }
 
     .play-again{
-        display: none;
-        z-index: 5;
-        position: absolute;
-        /* display:flex; */
-        align-items: center;
-        justify-content: center;
+       
         width: 306px;
         height: 306px;
     }
