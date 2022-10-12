@@ -9,6 +9,7 @@ let result= 0
 let hitPosition
 let currentTime = 30
 let timerId = null
+let countdownTimerId
 
 
 function randomSquare(){
@@ -36,29 +37,59 @@ squares.forEach(square => {
 
 
 // will randomly move mole to a square based on time you set
-function moveMole(){
-    
-    timerId = setInterval(randomSquare, 2000) //chnage this number to extend or shorten time
-}
+
+
 
 // randomSquare()
-moveMole()
+alert('Let\'s get whacking!');
+
+
+let closeDirections = document.querySelector('#close-button');
+let directions = document.querySelector('#game-directions');
+let directionsModal = document.querySelector('#game-directions-modal')
+
+closeDirections.addEventListener('click', closeBox);
+
+function closeBox(){
+         directions.classList.add('closed');
+         directionsModal.classList.add('closed')
+         console.log('closed the directions');
+         moveMole()
+         countDown()
+         startTimer()
+         
+               
+         
+  
+       
+      
+   }
+
+   function moveMole(){
+    
+    timerId = setInterval(randomSquare, 2000) //chnage this number to extend or shorten time mole spends in each box
+}
+
+function startTimer(){
+    countdownTimerId =  setInterval(countDown, 1000) 
+}
 
 
 
 function countDown(){
-currentTime--
-timeLeft.textContent = currentTime
-
-if(currentTime == 0){
-    clearInterval(countdownTimerId)
-    clearInterval(timerId)
-    alert('GAME OVER! Your final score is: ' + result)
-    playAgain.style.display= 'flex'
-} else{
-    playAgain.style.display= 'none'
+    currentTime--
+    timeLeft.textContent = currentTime
+     
+   if(currentTime == 0){
+       clearInterval(countdownTimerId)
+       clearInterval(timerId)
+       alert('GAME OVER! Your final score is: ' + result)
+       playAgain.style.display= 'flex'
+   } else{
+       playAgain.style.display= 'none'
+   }
+   
 }
-}
 
+// let countdownTimerId = setInterval(countDown, 1000) 
 // playAgain.style.display= "none"
-let countdownTimerId = setInterval(countDown, 1000)
